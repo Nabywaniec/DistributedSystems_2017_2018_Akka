@@ -37,7 +37,6 @@ public class LocalActor extends AbstractActor {
                         default:
                             System.out.println(s);
                             break;
-
                     }
                 })
                 .match(SearchResponse.class, o -> {
