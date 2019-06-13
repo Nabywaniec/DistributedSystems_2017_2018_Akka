@@ -33,7 +33,7 @@ public class BookTextActor extends AbstractActor {
                     String fileName = message.substring(message.indexOf(" ") + 1)+".txt";
                     File file = new File(fileName);
                     if(! file.exists()){
-                        getSender().tell("Taki plik nie istnieje", getSelf());
+                        getSender().tell("Taki file do not exists", getSelf());
                     }
                     else {
                         ActorMaterializer materializer = ActorMaterializer.create(context());
